@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Your Developer Portfolio</title>
+    <title>Theo's Amazing Portefolio</title>
     
     <!-- Bootstrap CSS -->
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
@@ -14,37 +14,88 @@
 <body>
 
     <header class="bg-dark text-white text-center py-5">
-        <h1>Your Name</h1>
-        <p>Web Developer</p>
+        <h1>Theo Sinatti</h1>
+        <p>Developpeur Python & Frontend JS</p>
     </header>
 
     <section id="projects" class="container mt-5">
-        <h2 class="mb-4">Projects</h2>
+        <h2 class="mb-4">Petit tour d'horizon de mes projets. Pour le reste, RDV sur mon GitHub !</h2>
 
-        <!-- Example Project 1 -->
+        <!-- OC Lettings -->
         <div class="project card mb-3">
             <div class="card-body">
-                <h3 class="card-title">Project 1</h3>
-                <p class="card-text">Description of Project 1.</p>
-                <a href="https://github.com/your-username/project1" class="btn btn-primary" target="_blank">GitHub Repository</a>
+                <h3 class="card-title">OC Lettings : Du CI/CD, et bien plus encore !</h3>
+                <p class="card-text">
+                    Il s'agit du dernier projet de ma formation de Développeur Python sur OpenClassrooms. Le site "Orange County Lettings", aux fonctionnalités très limitées, n'est que la base de travail du projet. L'enjeu du projet était d'apporter un certain nombre d'amélioration au site.
+                    Dans un premier temps, il fallait modulariser l'architecture du site, qui consistait en une seule application monolithique. Cette étape m'a permis d'approfondir ma connaissance des migrations Django, car il fallait déplacer les modèles sans perdre les données.
+                    Ensuite, il fallait corriger un certain nombre d'erreurs, mettre en place des tests (avec une couverture de tests de plus de 80%), et mettre en place une surveillance à l'aide de Sentry.
+                    La création d'une documentation en ligne à l'aide de Sphinx et Readthedocs était aussi demandé, ce qui m'a permis de me familiariser avec ces outils.
+                    Enfin, la partie la plus importante du projet consistait en la mise en place d'un pipeline CI/CD, à l'aide de CircleCI. Cela m'a poussé à me familiariser avec de nombreux nouveaux outils : CircleCI évidemment, mais aussi Docker, Dockerhub, Render, ou même whitenoise pour la gestion des fichiers statiques dans une application Django déployée.
+                </p>
+                <a href="https://github.com/TheoSntt/oc-lettings" class="btn btn-primary" target="_blank">GitHub Repository</a>
             </div>
         </div>
 
-        <!-- Example Project 2 -->
+        <!-- EpicEvents CRM -->
         <div class="project card mb-3">
             <div class="card-body">
-                <h3 class="card-title">Project 2</h3>
-                <p class="card-text">Description of Project 2.</p>
-                <a href="https://github.com/your-username/project2" class="btn btn-primary" target="_blank">GitHub Repository</a>
+                <h3 class="card-title">EpicEvents CRM : Un backend sécurisé dans une architecture modulaire !</h3>
+                <p class="card-text">
+                    Le projet CRM EpicEvents est un des derniers projets réalisés dans le cadre de ma formation OpenClassrooms.
+                    Le but de ce projet était, après 2 projets dédiés à Django, de nous faire réaliser un backend complet d'application sans Django. Ainsi, j'ai dû développer par moi-même de nombreuses fonctionnalités qui sont gérées de manières très automatiques par Django comme la gestion des tokens JWT, la gestion des champs de mot de passe (hashing, salting), les permissions, etc.
+                    Cette expérience a été très intéressante pour approfondir ma compréhension de ces mécanismes. Les bonnes pratiques apprises précédemment, comme l'utilisation d'un linter, et la mise en place d'une bonne couverture de tests ont été mises en application dans le cadre de ce projet.
+                    En termes de technologies, ce projet m'a aussi beaucoup apporté : Il m'a permis d'utiliser pour la première fois MySQL (j'étais plus familier avec SQLite et PostGres), ainsi que SQLAlchemy. C'est également sur ce projet que j'ai configuré l'outil de suivi des erreurs Sentry.
+                    Ce projet était aussi très intéressant en termes d'architecture et de Design Patterns. Sans l'architecture prédéfinie de Django, j'ai dû trouver des solutions pour rendre l'architecture la plus claire et la plus modulaire possible. J'en ai profité pour mettre en application pour la première fois les Design Patterns DAO et Repository.
+                </p>
+                <a href="https://github.com/TheoSntt/epicevents-crm" class="btn btn-primary" target="_blank">GitHub Repository</a>
             </div>
         </div>
 
-        <!-- Add more projects as needed -->
+        <!-- SoftDesk API -->
+        <div class="project card mb-3">
+            <div class="card-body">
+                <h3 class="card-title">API SoftDesk : DRF, un framework qui n'est pas en REST !</h3>
+                <p class="card-text">
+                    Le projet API SoftDesk est un projet d'API REST réalisé dans le cadre de mon cursus OpenClassrooms. Il s'agit d'un de mes projets les plus aboutis. Réalisé avec Django REST Framework, dans le but d'apprendre celui-ci, il consiste en une API de "issue tracking" relativement classique (des contributeurs, des projets, des issues, des commentaires) mais qui m'a permis de mettre en application des concepts avancés comme les nested routers, la gestion des token JWT, des contrôles divers selon le rôle de l'utilisateur, ...
+                    Par ailleurs, ce projet m'a permis de me re-familiariser avec Postman, et la documentation d'une API sur cet outil.
+                </p>
+                <a href="https://github.com/TheoSntt/softdesk-api" class="btn btn-primary" target="_blank">GitHub Repository</a>
+            </div>
+        </div>
+
+        <!-- LitReview -->
+        <div class="project card mb-3">
+            <div class="card-body">
+                <h3 class="card-title">LitReview : Quand la puissance de Django rencontre l'élégance de Bootstrap !</h3>
+                <p class="card-text">
+                    Ce projet est le site le plus abouti que j'ai développé à l'aide de Django. Il s'agit d'un réseau social de critiques littéraires où les utilisateurs peuvent se suivre mutuellement, et poster des demandes d'avis sur des oeuvres littéraires, et des critiques d'oeuvre en réponse à ces demandes d'avis.
+                    Le développement de cette application m'a permis de mettre en oeuvre et d'étendre ma connaissance du framework Django et de sa logique. Par ailleurs, le style de l'application a été fait à l'aide de Bootstrap5, une bonne occasion pour moi de me familiariser avec.
+                    Afin de rendre l'application plus facilement testable, le repository contient la base de données, la Secret Key Django, ainsi que des informations de connexions. Cela faisait partie des consignes du projet pour faciliter la vie des correcteurs.
+                    Je le précise ici pour pas qu'on me reproche d'avoir commit une SECRET_KEY : c'est fait exprès !
+                </p>
+                <a href="https://github.com/TheoSntt/litreview" class="btn btn-primary" target="_blank">GitHub Repository</a>
+            </div>
+        </div>
+
+        <!-- Diamond Talents -->
+        <div class="project card mb-3">
+            <div class="card-body">
+                <h3 class="card-title">Diamond Talents : Shine bright like a React !</h3>
+                <p class="card-text">
+                    Ce petit site Web a été créé dans le cadre de mon apprentissage de React.
+                    Il s'agit d'un faux site de freelancing. Les fonctionnalités sont plus poussée que sur mon premier projet Rêves botaniques.
+                    Le développement de cette application a été pour moi l'occasion de me familiariser avec les paradigmes de développement les plus modernes de React : React Router, les prop types, styled components, le context, les hooks personnalisés, les tests avec Jest et React Testing Library, ...
+                    Ce projet m'a confronté à de nombreux défis, notamment liés à l'évolution récente de l'écosystème React : Le tutoriel que je suivais se basait sur create-react-app, qui n'est plus maintenu. Cela a entrainé des problèmes de compatibilité/configuration entre les librairies, ... Un vrai régal !
+                    Même si ces considérations de configuration de Babel et autres Webpack sont un peu âpres, je suis content de mettre remis à jour sur ces questions !
+                </p>
+                <a href="https://github.com/TheoSntt/diamond-talents" class="btn btn-primary" target="_blank">GitHub Repository</a>
+            </div>
+        </div>
 
     </section>
 
     <footer class="bg-dark text-white text-center py-3 mt-5">
-        <p>&copy; 2023 Your Developer Portfolio</p>
+        <p>&copy; 2023 Theo's Amazing Portefolio</p>
     </footer>
 
     <!-- Bootstrap JS and dependencies -->
